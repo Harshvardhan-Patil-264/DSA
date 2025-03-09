@@ -17,6 +17,23 @@ void bubbleSort(int arr[], int n){
 	}
 }
 
+
+void RecursiveSortBubble(int arr[], int n){
+
+	// base case - one element
+	if(n == 1) return;
+
+	// Unsorted array - last element get sorted
+	for (int i = 0; i < n-1; i++){
+		if(arr[i] > arr[i + 1]){
+			swap(arr[i], arr[i+1]);
+		}
+	}
+	// recurvise call for remaining
+	RecursiveSortBubble(arr, n-1);
+}
+
+
 int main(){
 	int n = 6;
 	int arr[] = {2, 10, 4, 1, 0 ,5};
