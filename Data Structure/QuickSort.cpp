@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void partion(vector <int> arr, int start, int end){
+int partion(vector <int> &arr, int start, int end){
 
 	int pivot = arr[start];
 	int indecOfPivot = start;
@@ -27,7 +27,7 @@ void partion(vector <int> arr, int start, int end){
 
 
 
-void quickSort(vector <int> arr, int start, int end){
+void quickSort(vector <int> &arr, int start, int end){
 
 	if(start >= end) return;
 
@@ -40,7 +40,7 @@ void quickSort(vector <int> arr, int start, int end){
 int main(){
 
 	int n = 6;
-	int arr[] = {2, 10, 4, 1, 0 ,5};
+	vector <int> arr = {2, 10, 4, 1, 0 ,5};
 
 	//bubbleSort(arr, n);
 	//SelectionSort(arr, n);
